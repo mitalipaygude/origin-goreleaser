@@ -15,6 +15,7 @@ brews:
   - tap:
       owner: mitalipaygude
       name: test-goreleaser
+      token: "{{ .Env.HB_GT }}"
     folder: Formula
     homepage:  https://github.com/aws/eks-anywhere
     description: CLI for managing EKS Anywhere Kubernetes clusters
