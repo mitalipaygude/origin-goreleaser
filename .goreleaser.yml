@@ -1,0 +1,25 @@
+# Make sure to check the documentation at https://goreleaser.com
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+
+brews:
+  - tap:
+      owner: mitalipaygude
+      name: test-goreleaser
+    folder: Formula
+    homepage:  https://github.com/aws/eks-anywhere
+    description: CLI for managing EKS Anywhere Kubernetes clusters
+    dependencies:
+      - name: eksctl
+      - name: kubernetes-cli
+    install: |-
+      bin.install "eksctl-anywhere"
