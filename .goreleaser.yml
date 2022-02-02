@@ -12,10 +12,9 @@ builds:
       - amd64
 
 brews:
-  - name: eks-anywhere
   - tap:
       owner: mitalipaygude
-      name: test-goreleaser
+      name: eks-anywhere
       token: "{{ .Env.HB_GT }}"
     folder: Formula
     homepage:  https://github.com/aws/eks-anywhere
